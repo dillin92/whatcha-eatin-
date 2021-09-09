@@ -1,16 +1,16 @@
 import logo from './logo.svg';
-import SearchBar from './components/searchBar/SearchBar';
+import SearchBar from './components/searchBar';
 import './App.css';
 import Home from './pages/Home';
+import Nav from './components/Nav';
 
 function App() {
   return (
     <div className="App">
      <Nav/>
       <main>
-       <Home>
-         <SearchBar/>
-       </Home>
+        <Home></Home>
+     
       </main>
     </div>
     
