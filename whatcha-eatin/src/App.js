@@ -1,5 +1,4 @@
-import logo from './logo.svg';
-import SearchBar from './components/searchBar';
+
 import './App.css';
 import Home from './pages/Home';
 import Nav from './components/Nav';

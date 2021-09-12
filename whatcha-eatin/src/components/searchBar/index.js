@@ -1,49 +1,85 @@
-import React from "react";
-
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 
 const apiKey = "AIzaSyAoZvL9zENAx7_uSggjaC57K4JKzBR_9DY";
 
+  
 function getLocation() {
-    if (navigator.geolocation) {
-      navigator.geolocation.getCurrentPosition(showPosition);
-    } else {
-      x.innerHTML = "Geolocation is not supported by this browser.";
-    }
-  };
+  console.log('yo, diggity');
+
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(showPosition);
+  } else {
+    alert("Geolocation is not supported by this browser.");
+  }
+};
+
+getLocation();
 
 function showPosition(position) {
-    let location = position.coords.latitude + "," + position.coords.longitude;
-  
-    let img_url = `"https://maps.googleapis.com/maps/api/staticmap?center=
-    "+latlon+"&zoom=14&size=400x300&sensor=false&key=${apiKey}"`;
-  
-    document.getElementById("mapholder").innerHTML = "<img src='"+img_url+"'>";
-  };
 
-const connectApi = () => {
+  let latlon= position.coords.latitude + "," + position.coords.longitude;
 
-   
-    getLocation();
-    showPosition();
+  let img_url = `"https://maps.googleapis.com/maps/api/staticmap?center=
+  "+latlon+"&zoom=14&size=400x300&sensor=false&key=${apiKey}"`;
 
+  document.getElementById("#mapholder").innerHTML = "<img src='"+img_url+"'>";
 
-    fetch(`'https://maps.googleapis.com/maps/api/place/nearbysearch/json?keyword=' + ${keyword} + '&location=${location}' + '&radius= ${radius}' + &type=restaurant&key=${apiKey}'`)
-  .then(response => response.json())
-  .then(data => console.log(data));
-
+  console.log(latlon);
 };
+
+
+
+
 
 
 const SearchBar = () => {
 
-  return(
-<section>
-    <h1>Enter Your Search Here</h1>
-    <input placeholder="keyword"/>
-    <input placeholder="Distance-Radius"/>
-    <button>Submit</button>
-</section>
-  )
+//   const keyword = document.querySelector("#keyword");
+//   // const latlon= showPosition();
+//   const radius = document.querySelector("#radius");
+
+// const [error, setError] = useState(null);
+// const [data, setData] = useState(null);
+// const [loading, setLoading] = useState(true);
+// const [isLoaded, setIsLoaded] = useState(false);
+// const [items, setItems] = useState([]);
+
+//   function handleSubmit(e) {
+//     e.prevent.default();
+//     console.log('you clicked submit');
+//   }
+
+//   useEffect( () => {
+//     axios(`'https://maps.googleapis.com/maps/api/place/findplacefromtext/json?input=${keyword}&inputtype=textquery&key=${apiKey}'`)
+//   }).then(response => {
+//     setData(response.data)
+//   }).catch(error => {
+//     console.error(
+//       "error fetching data: ", error
+//     );
+//     setError(error);
+//   }).
+//   finally(() => {
+//     setLoading(false);
+//   })
+
+ return(
+
+<form id="search-form">
+        <div>
+          <label htmlFor="keyword">keyword</label>
+          <input type="text" id="keyword" name="keyboard" />
+        </div>
+        <div> 
+          <label htmlFor="radius">radius</label>
+          <input type="text" id ="radius" name="radius" />
+        </div>
+        <button type="submit">Submit</button>
+
+        <div id="mapholder"></div>
+</form>
+)
 };
 
 export default SearchBar;
