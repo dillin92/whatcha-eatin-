@@ -1,18 +1,15 @@
 import React from 'react';
-import axios from 'axios';
-const apiKey = "AIzaSyAoZvL9zENAx7_uSggjaC57K4JKzBR_9DY";
-const keyword = document.querySelector('#keyword');
+import fetchData from '../Fetch';
 
-const fetchData = () => {
-  return axios(`'https://maps.googleapis.com/maps/api/place/findplacefromtext/json?input=${keyword}&inputtype=textquery&key=${apiKey}'`)
- .then((response) => console.log(response.data));
 
-};
 
 const SearchBar = () => {
   return(
  
  <form id="search-form">
+
+    <h1>Search for Food Here!</h1>
+
          <div>
            <label htmlFor="keyword">keyword:</label>
            <input type="text" id="keyword" name="keyword" />

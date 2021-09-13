@@ -1,48 +1,21 @@
 import React, { useState } from "react";
-
+import axios from "axios"; 
 const apiKey = "AIzaSyAoZvL9zENAx7_uSggjaC57K4JKzBR_9DY";
 
-const SearchResults = () => {
+export default class fetchData extends React.Component {
 
-    console.log("yo, diggity");
-  
-    const keyword = document.querySelector("#keyword");
-    const latlon= showPosition();
-    const radius = document.querySelector("#radius");
-  
-  const [error, setError] = useState(null);
-  const [isLoaded, setIsLoaded] = useState(false);
-  const [items, setItems] = useState([]);
-  
-  useEffect(() => {
-    fetch(`'https://maps.googleapis.com/maps/api/place/nearbysearch/json?keyword=' + ${keyword} + '&location=${latlon}' + '&radius= ${radius}' + &type=restaurant&key=${apiKey}'`)
-      .then(res => res.json())
-      .then(
-        (result) => {
-          setIsLoaded(true);
-          setItems(result);
-        },        (error) => {
-          setIsLoaded(true);
-          setError(error);
-        }
-      )
-  }, [])
-  
-  if (error) {
-    return <div>Error: {error.message}</div>;
-  } else if (!isLoaded) {
-    return <div>Loading...</div>;
-  } else {
-    return (
-      <ul>
-        {items.map(item => (
-          <li key={item.id}>
-            {item.name} {item.price}
-          </li>
-        ))}
-      </ul>
-    );
-  }
+  state ={
+    loading: true
   }
   
-  export default SearchBar;
+componentDidMount() {  return axios(`'https://maps.googleapis.com/maps/api/place/findplacefromtext/json?input=${keyword}&inputtype=textquery&key=${apiKey}'`)
+.then((response) => console.log(response.data));
+}
+
+render() {
+  return <div>
+    {this.state.loading ? <div> loading... </div> : <div>Yum...</div>}
+  </div>
+}
+
+};
