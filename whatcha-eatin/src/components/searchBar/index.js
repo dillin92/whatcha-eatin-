@@ -7,8 +7,7 @@ const fetchData = () => {
   return axios(`'https://maps.googleapis.com/maps/api/place/findplacefromtext/json?input=${keyword}&inputtype=textquery&key=${apiKey}'`)
  .then((response) => console.log(response.data));
 
-}
-
+};
 
 const SearchBar = () => {
   return(
