@@ -20,12 +20,6 @@ const userSchema = new Schema(
             required: true,
             minlength: 8
         },
-        Searches: [
-            {
-                type: Schema.Types.ObjectId,
-                ref: 'Search'
-            }
-        ],  
     },
     {
         toJSON: {
