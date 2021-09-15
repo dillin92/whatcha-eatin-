@@ -1,3 +1,27 @@
+# Whatcha Eatin?
+
+## Description
+
+Whatcha Eatin? is a fun little application that spits out a random restaurantin those times that you just can't decide where to go. Simply click the GO TO! button and it will give you a random restaurant!
+
+## Usage Information
+
+Press the GO TO! button.
+
+![Screenshot (59)](https://user-images.githubusercontent.com/80184962/133371585-6b111c55-8849-4cb2-aa17-3831b3215ac2.png)
+
+[Whatcha Eatin?](http://whatcha-eatin.herokuapp.com/)
+
+## Questions
+
+_You can check out my Github Profile at the link below_
+
+[dillin92](http://github.com/dillin92)
+
+_If you need to reach me with additional questions my email is:_
+
+dillin970@gmail.com
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
