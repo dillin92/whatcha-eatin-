@@ -1,5 +1,5 @@
 import './App.css';
-import SearchBar from './components/searchBar';
+import Randomizer from './components/Randomizer';
 import Home from './pages/Home';
 import Nav from './components/Nav';
 // import Signup from './pages/Signup';
@@ -11,7 +11,7 @@ function App() {
      <Nav/>
       <main>
         <Home/>
-        <SearchBar/>
+        <Randomizer/>
 
     
  
