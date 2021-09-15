@@ -1,22 +1,12 @@
 import gql from 'graphql-tag';
 
-export const QUERY_USER = gql`
-{
-  user {
-    firstName
-    lastName
-    orders {
+export const QUERY_ME_BASIC = gql`
+  {
+    me {
       _id
-      purchaseDate
-      products {
-        _id
-        name
-        description
-        price
-        quantity
-        image
+      username
+      email
       }
     }
   }
-}
 `;
