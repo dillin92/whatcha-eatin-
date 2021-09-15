@@ -56,7 +56,7 @@ const Randomizer = () =>{
  
     <form id="search-form" >
    
-       <h1>Whatcha Eatin!</h1 >
+       <h1>Whatcha Eatin!</h1>
             <button type="submit">GO TO!!!</button>
             <div>{randomRestaurants}</div>
     </form>
