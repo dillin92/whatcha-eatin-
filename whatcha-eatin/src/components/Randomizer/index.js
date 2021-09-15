@@ -1,12 +1,11 @@
-import React, { useEffects, useState } from 'react';
-const apiKey = "AIzaSyAoZvL9zENAx7_uSggjaC57K4JKzBR_9DY";
-const keyword = document.querySelector('#keyword');
-const positionStackApi = 'c2a1ef285d8ddc4bc62cbf11b35816dd';
+import React from 'react';
+// const apiKey = "AIzaSyAoZvL9zENAx7_uSggjaC57K4JKzBR_9DY";
+// const keyword = document.querySelector('#keyword');
+// const positionStackApi = 'c2a1ef285d8ddc4bc62cbf11b35816dd';
 
 const restaurants = ['85C Bakery Cafe',
   'A&W Restaurants',
   "Arby's",
-  "Auntie Anne's",
   "Big Boy Restaurants",
   "Blaze Pizza",
   "Boston Market",
@@ -22,43 +21,25 @@ const restaurants = ['85C Bakery Cafe',
   "Domino's Pizza",
   "Dunkin' Donuts",
   "Five Guys",
-  "Gatti's Pizza",
-  "Godfather's Pizza",
-  "Golden Chick",
   "Hardee's",
   "In-N-Out Burger",
   "Jack in the Box",
-  "Jersey Mike's Subs",
-  "Jet's Pizza",
-  "Jollibee",
   "KFC",
   "Little Caesars",
   "Long John Silver's",
-  "Louisiana Famous Fried Chicken",
   "Marco's Pizza",
   "McDonald's",
-  "MOD Pizza",
   "Orange Julius",
   "Panda Express",
   "Papa Gino's",
   "Papa John's Pizza",
-  "Peter Piper Pizza",
-  "The Pizza Company",
   "Pizza Hut",
-  "Pizza Inn",
-  "Pollo Campero",
-  "Pollo Tropical",
   "Popeyes",
   "Quiznos",
-  "Sbarro",
   "Sonic Drive-In",
   "Starbucks",
   "Subway",
-  "Sweet Frog",
   "Taco Bell",
-  "TCBY",
-  "Tim Hortons",
-  "TKK Fried Chicken",
   "Wendy's",
   "Whataburger",
   "White Castle",
@@ -76,11 +57,11 @@ const Randomizer = () =>{
     <form id="search-form" >
    
        <h1>Whatcha Eatin!</h1 >
-            <button type="submit">GO!!!</button>
+            <button type="submit">GO TO!!!</button>
             <div>{randomRestaurants}</div>
     </form>
     )
-}
+};
 
 // const SearchBar = () => {
 
