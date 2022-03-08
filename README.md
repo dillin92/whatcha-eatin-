@@ -2,7 +2,7 @@
 
 ## Description
 
-Whatcha Eatin? is a fun little application that spits out a random restaurantin those times that you just can't decide where to go. Simply click the GO TO! button and it will give you a random restaurant!
+Whatcha Eatin? is a fun little application that spits out a random restaurant in those times that you just can't decide where to go. Simply click the GO TO! button and it will give you a random restaurant!
 
 ## Usage Information
 
