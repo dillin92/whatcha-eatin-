@@ -18,13 +18,13 @@ import {Nav, NavbarContainer, NavLogo, MobileIcon, NavMenu, NavItem, NavLinks } 
                     </MobileIcon>
                     <NavMenu>
                         <NavItem>
-                            <NavLinks href="#portfolio">Portfolio</NavLinks>
+                            <NavLinks href="#portfolio">Home</NavLinks>
                         </NavItem>
                         <NavItem>
-                            <NavLinks href="#about">About</NavLinks>
+                            <NavLinks href="#about">Profile</NavLinks>
                         </NavItem>
                         <NavItem>
-                            <NavLinks href="#contact">Contact</NavLinks>
+                            <NavLinks href="#contact">History</NavLinks>
                         </NavItem>
                     </NavMenu>
                 </NavbarContainer>

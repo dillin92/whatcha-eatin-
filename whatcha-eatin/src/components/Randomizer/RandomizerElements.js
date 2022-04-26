@@ -62,10 +62,10 @@ color: white;
 `
 
 export const Buttons = styled.section`
-margin: 50px;
-
+margin: 20px;
 `
 
 export const RandomizerEl = styled.form`
-background-color: #AD3713;`
+background-color: #AD3713;
+padding: 85px;`
 

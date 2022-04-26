@@ -1,5 +1,5 @@
 import React from 'react';
-import { WhatchaEatin, LetsEat, Results, RemoveFromMyList, ImEatin, RandomizerEl } from './RandomizerElements';
+import { WhatchaEatin, LetsEat, Results, RemoveFromMyList, ImEatin, RandomizerEl, Buttons } from './RandomizerElements';
 
 const restaurants = [{name: "85C Bakery Cafe"},
  {name:  'A&W Restaurants'},
@@ -58,10 +58,10 @@ const Randomizer = () =>{
     <RandomizerEl>
        <WhatchaEatin>Whatcha Eatin!</WhatchaEatin>
             <Results>{restaurant}
-              <section>
+              <Buttons>
                 <RemoveFromMyList>Delete</RemoveFromMyList>
                 <ImEatin>ImEatinThis</ImEatin>
-              </section>
+              </Buttons>
             </Results>
 
             <LetsEat type="submit">Lets Eat!!!</LetsEat>           
