@@ -1,57 +1,63 @@
 import React from 'react';
-import { WhatchaEatin, LetsEat, Results, RemoveFromMyList, ImEatin } from './RandomizerElements';
+import { WhatchaEatin, LetsEat, Results, RemoveFromMyList, ImEatin, RandomizerEl } from './RandomizerElements';
 
-const restaurants = ['85C Bakery Cafe',
-  'A&W Restaurants',
-  "Arby's",
-  "Big Boy Restaurants",
-  "Blaze Pizza",
-  "Boston Market",
-  "Buffalo Wild Wings",
-  "Burger King",
-  "Carl's Jr",
-  "Chipotle Mexican Grill",
-  "Church's Chicken",
-  "Cicis",
-  "Cinnabon",
-  "Culver's",
-  "Dairy Queen",
-  "Domino's Pizza",
-  "Dunkin' Donuts",
-  "Five Guys",
-  "Hardee's",
-  "In-N-Out Burger",
-  "Jack in the Box",
-  "KFC",
-  "Little Caesars",
-  "Long John Silver's",
-  "Marco's Pizza",
-  "McDonald's",
-  "Orange Julius",
-  "Panda Express",
-  "Papa Gino's",
-  "Papa John's Pizza",
-  "Pizza Hut",
-  "Popeyes",
-  "Quiznos",
-  "Sonic Drive-In",
-  "Starbucks",
-  "Subway",
-  "Taco Bell",
-  "Wendy's",
-  "Whataburger",
-  "White Castle",
-  "Wingstop",
-  "WingStreet"
+const restaurants = [{name: "85C Bakery Cafe"},
+ {name:  'A&W Restaurants'},
+  {name: "Arby's"},
+  {name:"Big Boy Restaurants"},
+  {name:"Blaze Pizza"},
+  {name:"Boston Market"},
+  {name:"Buffalo Wild Wings"},
+  {name: "Burger King"},
+  {name: "Carl's Jr"},
+  {name: "Chipotle Mexican Grill"},
+  {name:"Church's Chicken"},
+  {name:"Cicis"},
+  {name:"Cinnabon"},
+  {name:"Culver's"},
+  {name: "Dairy Queen"},
+  {name:"Domino's Pizza"},
+  {name:"Dunkin' Donuts"},
+  {name:"Five Guys"},
+  {name:"Hardee's"},
+  {name:"In-N-Out Burger"},
+  {name:"Jack in the Box"},
+  {name: "KFC"},
+  {name:"Little Caesars"},
+  {name:"Long John Silver's"},
+  {name:"Marco's Pizza"},
+  {name:"McDonald's"},
+  {name:"Orange Julius"},
+  {name:"Panda Express"},
+  {name:"Papa Gino's"},
+  {name:"Papa John's Pizza"},
+  {name:"Pizza Hut"},
+  {name: 'Pizza King'},
+  {name:"Popeyes"},
+  {name:"Quiznos"},
+  {name:"Sonic Drive-In"},
+  {name:"Starbucks"},
+  {name:"Subway"},
+  {name:"Taco Bell"},
+  {name:"Wendy's"},
+  {name:"Whataburger"},
+  {name:"White Castle"},
+  {name:"Wingstop"},
+  {name:"WingStreet"}
 ];
-let randomRestaurants = restaurants[Math.floor(Math.random() * restaurants.length -1)];
+
+const randomRestaurants = restaurants[Math.floor(Math.random() * restaurants.length -1)];
+
+const restaurant = randomRestaurants.name;
+
+
 
 const Randomizer = () =>{
   return(
  
-    <form>
+    <RandomizerEl>
        <WhatchaEatin>Whatcha Eatin!</WhatchaEatin>
-            <Results>{randomRestaurants}
+            <Results>{restaurant}
               <section>
                 <RemoveFromMyList>Delete</RemoveFromMyList>
                 <ImEatin>ImEatinThis</ImEatin>
@@ -59,7 +65,7 @@ const Randomizer = () =>{
             </Results>
 
             <LetsEat type="submit">Lets Eat!!!</LetsEat>           
-    </form>
+    </RandomizerEl>
     )
 };
  export default Randomizer;
