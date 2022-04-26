@@ -11,7 +11,7 @@ import {Nav, NavbarContainer, NavLogo, MobileIcon, NavMenu, NavItem, NavLinks } 
             <Nav>
                 <NavbarContainer>
                     <NavLogo to='/'>
-                        Dillin Helsley Web Development
+                        WhatchaEatin?
                     </NavLogo>
                     <MobileIcon>
                         <FaBars/>
